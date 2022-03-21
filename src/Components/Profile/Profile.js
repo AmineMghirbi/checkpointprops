@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 const Profile = (props) => {
-  props.handleName(props.fullName);
   const nameStyle={color:'red'};
   return (
     <div>
@@ -21,7 +20,11 @@ Profile.prototype= {
   profession:PropTypes.string
 
 }
-
+Profile.defaultProps={
+  fullName:"Amine Mghirbi",
+  bio:"NADA",
+  profession:"NADA"
+}
 
 export default Profile
 
